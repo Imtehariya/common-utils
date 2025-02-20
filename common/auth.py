@@ -12,7 +12,7 @@ def create_access_token(user_id: int, expires_in: int = 24):
     token = jwt.encode({"user_id": user_id, "exp": expiration}, SECRET_KEY, algorithm="HS256")
     return token
 
-def verify_access_token(token: str, db: Session = Depends(get_db)) -> Optional[User]:
+def verify_access_token(token: str, db: Session) -> Optional[User]:
     try:
         # Decode the JWT token
         payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
