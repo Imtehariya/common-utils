@@ -2,8 +2,6 @@ from datetime import datetime, timedelta
 from typing import Optional
 from jose import jwt, JWTError
 from sqlalchemy.orm import Session
-from fastapi import Depends
-from database import get_db  # Import your database session dependency
 from models import User  # Import your SQLAlchemy User model
 from config import SECRET_KEY  # Import your secret key
 
