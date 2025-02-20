@@ -2,8 +2,8 @@ from datetime import datetime, timedelta
 from typing import Optional
 from jose import jwt, JWTError
 from sqlalchemy.orm import Session
-from models import User  # Import your SQLAlchemy User model
-from config import SECRET_KEY  # Import your secret key
+from .models import User  # Import your SQLAlchemy User model
+from .config import SECRET_KEY  # Import your secret key
 
 def create_access_token(user_id: int, expires_in: int = 24):
     expiration = datetime.now() + timedelta(hours=expires_in)
