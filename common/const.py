@@ -11,10 +11,10 @@ class UserType(str, Enum):
     BUSINESS = 'business'
 
 class UserRole(Enum):
-    SUPER_ADMIN = 11
-    SUB_ADMIN = 12
-    VIEWER = 13
-    CLIENT_ADMIN = 1
+    SUPER_ADMIN = 'SUPER_ADMIN'
+    ADMIN = 'ADMIN'
+    VIEWER = 'VIEWER'
+    CLIENT_ADMIN = 'CLIENT_ADMIN'
 
 class UserStep(str, Enum):  # Inheriting from `str` makes it work with FastAPI validation
     OTP = "otp"
