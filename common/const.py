@@ -6,9 +6,9 @@ class Status(Enum):
     PENDING = 2
     DELETED = 10
 
-class UserType(Enum):
-    PERSONAL = 0
-    BUSINESS = 1
+class UserType(str, Enum):
+    INDIVIDUAL = 'individual'
+    BUSINESS = 'business'
 
 class UserRole(Enum):
     SUPER_ADMIN = 11
